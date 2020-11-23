@@ -97,6 +97,43 @@ const Indicator = ({scrollX}) => {
     );
   };
 
+  const Squares = ({scrollX}) => {
+    const YOLO = Animated.modulo(
+      Animated.divide(Animated.modulo(scrollX, width), new Animated.Value(width)),
+      1,
+    );
+  
+    const rotate = YOLO.interpolate({
+      inputRange: [0, 0.5, 1],
+      outputRange: ['30deg', '20deg', '30deg'],
+    });
+    const translateX = YOLO.interpolate({
+      inputRange: [0, 0.5, 1],
+      outputRange: [0, -height, 0],
+    });
+    return (
+      <Animated.View
+        style={{
+          width: height,
+          height: height,
+          backgroundColor: '#fff',
+          borderRadius: 86,
+          position: 'absolute',
+          top: -height * 0.6,
+          left: -height * 0.3,
+          transform: [
+            {
+              rotate,
+            },
+            {
+              translateX,
+            },
+          ],
+        }}
+      />
+    );
+  };
+
 const Carousel = () => {
     const scrollX = useRef(new Animated.Value(0)).current;
   
