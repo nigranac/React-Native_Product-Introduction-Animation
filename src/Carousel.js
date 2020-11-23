@@ -46,7 +46,23 @@ const DATA = [
     image:require( "./assets/pasta.png"),
   },
 ];
-
+const Backdrop = ({scrollX}) => {
+    const backgroundColor = scrollX.interpolate({
+      inputRange: bgs.map((_, i) => i * width),
+      outputRange: bgs.map((bg) => bg),
+    });
+  
+    return (
+      <Animated.View
+        style={[
+          StyleSheet.absoluteFillObject,
+          {
+            backgroundColor,
+          },
+        ]}
+      />
+    );
+  };
 
 const Indicator = ({scrollX}) => {
     return (
