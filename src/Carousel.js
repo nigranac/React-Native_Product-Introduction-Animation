@@ -17,7 +17,6 @@ const DATA = [
     title: 'STEAK',
     description:
       "Best of !!! You cant find it everywhere!",
-    // image: 'https://image.flaticon.com/icons/png/256/3571/3571572.png',
     image:require( "./assets/steak.png"),
     
   },
@@ -26,7 +25,6 @@ const DATA = [
     title: 'SALAD',
     description:
       'You should try for your health!',
-    // image: 'https://image.flaticon.com/icons/png/256/3571/3571747.png',
     image:require( "./assets/salad.png"),
   },
   {
@@ -34,14 +32,12 @@ const DATA = [
     title: 'BURGER',
     description:
       'This burger isnt anywhere else!😊',
-    // image: 'https://image.flaticon.com/icons/png/256/3571/3571680.png',
     image:require( "./assets/chips.png"),
   },
   {
     key: '3571603',
     title: 'PASTA',
     description: 'Came special from italy 🍝',
-    // image: 'https://image.flaticon.com/icons/png/256/3571/3571603.png',
     image:require( "./assets/pasta.png"),
   },
 ];
